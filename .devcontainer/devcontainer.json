@@ -3,11 +3,10 @@
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "installZsh": false,
-      "username": "root"
+      "installZsh": false
     }
   },
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postCreateCommand": "chmod +x init_exam.sh && bash init_exam.sh",
   "customizations": {
     "vscode": {
       "extensions": [],
@@ -16,13 +15,7 @@
       }
     }
   },
-  "forwardPorts": [7681],
-  "portsAttributes": {
-    "7681": {
-      "label": "RHCSA Terminal",
-      "onAutoForward": "notify"
-    }
-  }
+  "remoteUser": "vscode"
 }
 
 // Made with Bob
