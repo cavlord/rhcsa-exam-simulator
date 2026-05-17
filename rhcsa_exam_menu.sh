@@ -3,9 +3,10 @@
 # RHCSA Exam Simulator - Interactive Menu
 # Auto-runs on boot and provides question-by-question navigation
 
-QUESTIONS_FILE="/root/questions.txt"
-PROGRESS_FILE="/root/.exam_progress"
-TIMER_FILE="/root/.exam_timer"
+# Use home directory for compatibility
+QUESTIONS_FILE="$HOME/questions.txt"
+PROGRESS_FILE="$HOME/.exam_progress"
+TIMER_FILE="$HOME/.exam_timer"
 EXAM_DURATION=7200  # 2 hours in seconds
 
 # Colors
