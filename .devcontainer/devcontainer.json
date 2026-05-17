@@ -1,0 +1,28 @@
+{
+  "name": "RHCSA Exam Simulator",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "username": "root"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "forwardPorts": [7681],
+  "portsAttributes": {
+    "7681": {
+      "label": "RHCSA Terminal",
+      "onAutoForward": "notify"
+    }
+  }
+}
+
+// Made with Bob
